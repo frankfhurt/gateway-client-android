@@ -15,7 +15,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp">
 
@@ -23,22 +23,41 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/status_name"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:layout_alignParentLeft="true"
-                android:text="Default Text"
-                android:layout_gravity="center_vertical"/>
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
 
-            <Switch
-                android:id="@+id/status_value"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:clickable="false"
-                android:layout_gravity="center_vertical" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/status_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="Default Text"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <Switch
+                        android:id="@+id/status_value_switch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:clickable="false"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/status_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" />
+            </LinearLayout>
 
             <ProgressBar
                 android:id="@+id/progress"

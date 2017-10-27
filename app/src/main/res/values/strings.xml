@@ -10,6 +10,10 @@
     <string name="about">About</string>
     <string name="sat">S@T</string>
 
+    <string name="about_message">App developed by: Franklyn Vieira</string>
+
+    <string name="settings_message">Nothing to show here</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -9,4 +9,7 @@
     <string name="string_printer">Impressora</string>
     <string name="about">Sobre</string>
     <string name="sat">S@T</string>
+
+    <string name="about_message">Aplicativo desenvolvido por: Franklyn Vieira</string>
+    <string name="settings_message">Nada para mostrar aqui!</string>
 </resources>

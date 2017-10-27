@@ -11,6 +11,7 @@ import br.com.bematech.gateway_android_client.extensions.addFragment
 import br.com.bematech.gateway_android_client.fragment.StatusFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toobar.*
+import org.jetbrains.anko.toast
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -55,17 +56,26 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_print -> {
-                val printer = StatusFragment()
-                addFragment(R.id.layout_fragment, printer)
+                val statusFragment = StatusFragment()
+                val bundle = Bundle()
+                bundle.putSerializable("statusType", "printer")
+                statusFragment.arguments = bundle
+
+                addFragment(R.id.layout_fragment, statusFragment)
             }
             R.id.nav_sat -> {
+                val statusFragment = StatusFragment()
+                val bundle = Bundle()
+                bundle.putSerializable("statusType", "sat")
+                statusFragment.arguments = bundle
 
+                addFragment(R.id.layout_fragment, statusFragment)
             }
             R.id.nav_settings -> {
-
+                toast(R.string.settings_message)
             }
             R.id.nav_about -> {
-
+                toast(R.string.about_message)
             }
         }
 
